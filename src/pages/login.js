@@ -26,7 +26,7 @@ function Login(){
                 <input type="password" placeholder="password"></input>
                 <input type="submit" id="S"></input>
                 {err && <span>Something went wrong</span>}
-                <p style={{width:'35%'}}>Do not have an Account?<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></p>
+                <p style={{width:'33%'}}>Do not have an Account?<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></p>
             </form>
         </div>
     )

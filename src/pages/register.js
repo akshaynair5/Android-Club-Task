@@ -41,15 +41,15 @@ function Register (){
     return(
         <div className="FormBox">
             <form onSubmit={(e)=>HandleSubmit(e)}>
-                <input type="text" placeholder="Name"></input>
-                <input type="email" placeholder="Email-ID"></input>
-                <input type="number" placeholder="Mobile Number"></input>
-                <input type="password" placeholder="password"></input>
+                <input type="text" placeholder="Name" required></input>
+                <input type="email" placeholder="Email-ID" required></input>
+                <input type="number" placeholder="Mobile Number" required></input>
+                <input type="password" placeholder="Password" required></input>
                 <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
-                <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
-                <input type="submit" id="S"></input>
+                <input id="Fl" type="file" placeholder="file" style={{display:'none'}} required></input>
+                <input type="submit" id="S" value="Register"></input>
                 {err && <span>Something went wrong</span>}
-                <p style={{width:'30%'}}>Have an Account<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></p>
+                <p style={{width:'24%'}}>Have an Account<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></p>
             </form>
         </div>
     )
