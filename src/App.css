@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: #59788E;
+}
+
+
+/* Regsitration page css */
+
+.FormBox{
+  position: absolute;
+  left:25%;
+  top:14%;
+  width:40%;
+  background-color: azure;
+  padding: 3%;
+  min-height: 30%;
+  border-radius: 30px;
+  height: fit-content;
+  padding-bottom: 1%;
+}
+.FormBox form{
+  display: flex;
+  flex-direction: column;
+}
+.FormBox form input{
+  margin:3%;
+  padding: 1%;
+  width: 75%;
+  align-self: center;
+  height: 20%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 110%;
+}
+.FormBox form label{
+  margin:3%;
+  padding: 1%;
+  width: 75%;
+  align-self: center;
+  height: 20%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 110%;
+  display: flex;
+  font-size: 150%;
+}
+.FormBox form p{
+  align-self: center;
+}
+
+.FormBox form input:focus{
+  outline: none;
+}
+.FormBox form #S{
+  width:35%;
+  padding: 2.5%;
+  background-color: #282c34;
+  color: aliceblue;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width:720px){
+  .FormBox{
+    left:15%;
+    top:14%;
+    width:70%;
+    padding: 2%;
+    /* height: fit-content; */
+  }
+  .FormBox form input{
+    margin:7%;
+    padding: 2%;
+  }
+  .FormBox form label{
+    margin:3%;
+    padding: 1%;
+
+  }
+  .FormBox form #S{
+    width:55%;
+    padding: 4%;
+    background-color: #282c34;
+    color: aliceblue;
+    border-radius: 25px;
+  }
+}

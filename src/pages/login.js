@@ -1,7 +1,7 @@
 import { auth } from "../firebase_config";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link} from "react-router-dom";
 
 function Login(){
     const navigate = useNavigate()
@@ -11,7 +11,7 @@ function Login(){
         const email = e.target[0].value
         const password = e.target[1].value
         try{
-            signInWithEmailAndPassword(auth,email,password)
+            await signInWithEmailAndPassword(auth,email,password)
             navigate("/Profile")
         }
         catch(err){
@@ -20,12 +20,13 @@ function Login(){
 
     }
     return(
-        <div className="login-form" onSubmit={(e)=>HandleSubmit(e)}>
+        <div className="FormBox" onSubmit={(e)=>HandleSubmit(e)}>
             <form>
                 <input type="email" placeholder="email"></input>
                 <input type="password" placeholder="password"></input>
-                <input type="submit"></input>
+                <input type="submit" id="S"></input>
                 {err && <span>Something went wrong</span>}
+                <p style={{width:'35%'}}>Do not have an Account?<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></p>
             </form>
         </div>
     )

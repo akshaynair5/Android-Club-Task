@@ -4,7 +4,8 @@ import { useState } from "react";
 import { auth } from "../firebase_config"
 import { storage } from "../firebase_config";
 import { getDownloadURL } from "firebase/storage";
-import {useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
+import ProfilePicIcon from "../images/user.png"
 function Register (){
     const navigate = useNavigate()
     const [err,setErr] = useState(false)
@@ -25,7 +26,7 @@ function Register (){
                         await updateProfile(User.user,{
                             displayName,
                             photoURL:downloadURL,
-                            mobileNumber:number
+                            phoneNumber:number
                         })
                     }
                     catch(err){
@@ -38,15 +39,17 @@ function Register (){
 
     }
     return(
-        <div className="RegisterPage">
+        <div className="FormBox">
             <form onSubmit={(e)=>HandleSubmit(e)}>
                 <input type="text" placeholder="Name"></input>
                 <input type="email" placeholder="Email-ID"></input>
                 <input type="number" placeholder="Mobile Number"></input>
                 <input type="password" placeholder="password"></input>
-                <input type="file" placeholder="file"></input>
-                <input type="submit" ></input>
+                <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
+                <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
+                <input type="submit" id="S"></input>
                 {err && <span>Something went wrong</span>}
+                <p style={{width:'30%'}}>Have an Account<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></p>
             </form>
         </div>
     )

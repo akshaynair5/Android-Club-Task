@@ -8,7 +8,9 @@ function Profile(){
     return(
         <div>
             <div>{currentUser.displayName}</div>
-            <button onClick={()=>signOut(auth)}></button>
+            <div>{currentUser.mobileNumber}</div>
+            <div><img src={currentUser.photoURL}></img></div>
+            <button onClick={()=>signOut(auth)} style={{width:'300px',height:'100px'}}>Logout</button>
         </div>
     )
 }
