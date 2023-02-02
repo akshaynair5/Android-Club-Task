@@ -22,8 +22,8 @@ function Login(){
     return(
         <div className="FormBox" onSubmit={(e)=>HandleSubmit(e)}>
             <form>
-                <input type="email" placeholder="email"></input>
-                <input type="password" placeholder="password"></input>
+                <input type="email" placeholder="Email"></input>
+                <input type="password" placeholder="Password"></input>
                 <input type="submit" id="S"></input>
                 {err && <span>Something went wrong</span>}
                 <p style={{width:'33%'}}>Do not have an Account?<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></p>

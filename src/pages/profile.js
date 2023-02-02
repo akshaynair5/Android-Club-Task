@@ -6,11 +6,17 @@ import { auth } from "../firebase_config";
 function Profile(){
     const {currentUser} = useContext(Authcontext)
     return(
-        <div>
-            <div>{currentUser.displayName}</div>
-            <div>{currentUser.mobileNumber}</div>
-            <div><img src={currentUser.photoURL}></img></div>
-            <button onClick={()=>signOut(auth)} style={{width:'300px',height:'100px'}}>Logout</button>
+        <div className="home">
+            <p className="heading">Welcome {currentUser.displayName}!!</p>
+            <div className="profileBox">
+                <div><img src={currentUser.photoURL} style={{width:'40%',cursor:'pointer',borderRadius:'30px'}}></img></div>
+                <div className="Info">
+                    <div><p>Name: {currentUser.displayName}</p></div>
+                    <div><p>Mobile Number: {currentUser.phoneNumber}</p></div>
+                    <div><p>Email: {currentUser.email}</p></div>
+                </div>
+                <button onClick={()=>signOut(auth)}>Logout</button>
+            </div>
         </div>
     )
 }
