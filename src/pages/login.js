@@ -25,8 +25,8 @@ function Login(){
                 <input type="email" placeholder="Email"></input>
                 <input type="password" placeholder="Password"></input>
                 <input type="submit" id="S"></input>
-                {err && <span>Something went wrong</span>}
-                <p style={{width:'33%'}}>Do not have an Account?<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></p>
+                {err && <span style={{alignSelf:'center'}}><b>Username or Password is wrong, Try Again!</b></span>}
+                <p style={{width:'34%'}}>Do not have an Account?<b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
             </form>
         </div>
     )

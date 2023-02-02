@@ -26,7 +26,7 @@ function Register (){
                         await updateProfile(User.user,{
                             displayName,
                             photoURL:downloadURL,
-                            phoneNumber:number
+                            phoneNumber:number,
                         })
                     }
                     catch(err){
@@ -48,8 +48,8 @@ function Register (){
                 <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
                 <input id="Fl" type="file" placeholder="file" style={{display:'none'}} required></input>
                 <input type="submit" id="S" value="Register"></input>
-                {err && <span>Something went wrong</span>}
-                <p style={{width:'24%'}}>Have an Account<Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></p>
+                {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
+                <p style={{width:'26%'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></b></p>
             </form>
         </div>
     )

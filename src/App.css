@@ -93,6 +93,7 @@ body{
   font-size: 110%;
   display: flex;
   font-size: 150%;
+  cursor: pointer;
 }
 .FormBox form p{
   align-self: center;
@@ -160,12 +161,14 @@ body{
   background-color: red;
 }
 .profileBox img{
-  width:30%;
+  width:20%;
   cursor:pointer;
   border-radius:30px;
   position: absolute;
-  left: 2%;
+  left: 4%;
   top:2%;
+  border-radius: 50%;
+  top:6%;
 }
 
 /* Heading css */
@@ -174,6 +177,7 @@ body{
   position: absolute;
   top:-5%;
   color: azure;
+  left:5%;
 }
 
 @media only screen and (max-width:720px){
@@ -222,7 +226,7 @@ body{
     padding-right: 5%;
   }
   .profileBox img{
-    width:250px;
+    width:150px;
   }
 }
 @media only screen and (min-width:720px) and (max-width:850px) {
