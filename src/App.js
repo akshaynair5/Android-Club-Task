@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {HashRouter,Route,Routes} from 'react-router-dom'
 import Register from './pages/register';
 import Login from './pages/login';
 import Profile from './pages/profile';
@@ -19,13 +19,13 @@ function App() {
     )
   }
   return (
-    <BrowserRouter basename="/Android-Club-Task">
+    <HashRouter basename="/Android-Club-Task">
       <Routes>
         <Route exact path="/Android-Club-Task" element={<Register/>}></Route>
         <Route  path="/Login" element={<Login/>}></Route>
         <Route  path="/Profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
