@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthContextProvider } from './contextProvider';
-
+import { HashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </AuthContextProvider>
+    <AuthContextProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
