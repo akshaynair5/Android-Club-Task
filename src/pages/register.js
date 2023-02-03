@@ -6,6 +6,10 @@ import { storage } from "../firebase_config";
 import { getDownloadURL } from "firebase/storage";
 import {Link, useNavigate } from "react-router-dom";
 import ProfilePicIcon from "../images/user.png"
+import { db } from "../firebase_config";
+import { doc, setDoc } from "firebase/firestore"; 
+
+
 function Register (){
     const navigate = useNavigate()
     const [err,setErr] = useState(false)
@@ -26,8 +30,14 @@ function Register (){
                         await updateProfile(User.user,{
                             displayName,
                             photoURL:downloadURL,
-                            phoneNumber:number,
                         })
+                        await setDoc(doc(db, "users", User.user.uid), {
+                            uid: User.user.uid,
+                            displayName,
+                            email,
+                            photoURL: downloadURL,
+                            phoneNumber:number,
+                        });
                     }
                     catch(err){
                         setErr(true)
