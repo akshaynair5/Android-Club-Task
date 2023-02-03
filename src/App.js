@@ -22,8 +22,8 @@ function App() {
     <BrowserRouter basename="/Android-Club-Task">
       <Routes>
         <Route exact path="/Android-Club-Task" element={<Register/>}></Route>
-        <Route exact path="/Login" element={<Login/>}></Route>
-        <Route exact path="/Profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}></Route>
+        <Route  path="/Login" element={<Login/>}></Route>
+        <Route  path="/Profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}></Route>
       </Routes>
     </BrowserRouter>
   );
