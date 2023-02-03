@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Android-Club-Task/static/css/main.52e3a7ec.css",
-    "main.js": "/Android-Club-Task/static/js/main.29008193.js",
+    "main.js": "/Android-Club-Task/static/js/main.ade6548e.js",
     "static/js/787.98fbf467.chunk.js": "/Android-Club-Task/static/js/787.98fbf467.chunk.js",
     "static/media/user.png": "/Android-Club-Task/static/media/user.38b097360cd1024e4462.png",
     "index.html": "/Android-Club-Task/index.html",
     "main.52e3a7ec.css.map": "/Android-Club-Task/static/css/main.52e3a7ec.css.map",
-    "main.29008193.js.map": "/Android-Club-Task/static/js/main.29008193.js.map",
+    "main.ade6548e.js.map": "/Android-Club-Task/static/js/main.ade6548e.js.map",
     "787.98fbf467.chunk.js.map": "/Android-Club-Task/static/js/787.98fbf467.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52e3a7ec.css",
-    "static/js/main.29008193.js"
+    "static/js/main.ade6548e.js"
   ]
 }
