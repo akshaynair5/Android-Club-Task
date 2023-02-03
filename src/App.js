@@ -19,9 +19,9 @@ function App() {
     )
   }
   return (
-    <HashRouter basename="/Android-Club-Task">
+    <HashRouter>
       <Routes>
-        <Route exact path="/Android-Club-Task" element={<Register/>}></Route>
+        <Route exact path="/Register" element={<Register/>}></Route>
         <Route  path="/Login" element={<Login/>}></Route>
         <Route  path="/Profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}></Route>
       </Routes>
