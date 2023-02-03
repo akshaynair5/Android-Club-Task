@@ -161,7 +161,8 @@ body{
   background-color: red;
 }
 .profileBox img{
-  width:20%;
+  width:23%;
+  height: 87%;
   cursor:pointer;
   border-radius:30px;
   position: absolute;
@@ -227,6 +228,7 @@ body{
   }
   .profileBox img{
     width:150px;
+    height: 100px;
   }
 }
 @media only screen and (min-width:720px) and (max-width:850px) {
