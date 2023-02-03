@@ -5,20 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "/Register",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/Login",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/Profile",
-        "destination": "/index.html"
-      }
     ]
   }
 }
