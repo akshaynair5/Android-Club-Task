@@ -19,7 +19,7 @@ function App() {
     )
   }
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Android-Club-Task">
       <Routes>
         <Route exact path="/Register" element={<Register/>}></Route>
         <Route exact path="/Login" element={<Login/>}></Route>
